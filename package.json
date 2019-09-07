@@ -10,14 +10,19 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:extension.dirtyTraceBefore",
+		"onCommand:extension.dirtyTraceAfter"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "extension.dirtyTraceBefore",
+				"title": "Dirty Trace Before"
+			},
+			{
+				"command": "extension.dirtyTraceAfter",
+				"title": "Dirty Trace After"
 			}
 		]
 	},
@@ -34,9 +39,10 @@
 		"@types/node": "^10.12.21",
 		"@types/vscode": "^1.38.0",
 		"glob": "^7.1.4",
+		"jshint": "^2.10.2",
 		"mocha": "^6.1.4",
-		"typescript": "^3.3.1",
 		"tslint": "^5.12.1",
+		"typescript": "^3.3.1",
 		"vscode-test": "^1.0.2"
 	}
 }
