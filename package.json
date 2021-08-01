@@ -14,7 +14,8 @@
 	"activationEvents": [
 		"onCommand:extension.dirtyTraceBefore",
 		"onCommand:extension.dirtyTraceAfter",
-		"onCommand:extension.goLogField"
+		"onCommand:extension.goLogField",
+		"onCommand:extension.goFoldErrors"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -30,6 +31,10 @@
 			{
 				"command": "extension.goLogField",
 				"title": "Go Log Field"
+			},
+			{
+				"command": "extension.goFoldErrors",
+				"title": "Go Fold Errors"
 			}
 		]
 	},

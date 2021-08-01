@@ -24,6 +24,6 @@ export function goLogField(textEditor: vscode.TextEditor) {
             new vscode.Position(position.line, textLine.firstNonWhitespaceCharacterIndex + PREFIX.length)
         );
     } else {
-        vscode.window.showErrorMessage(`Dirty Trace: language ${language} is not yet supported`);
+        vscode.window.showErrorMessage(`Log Field: language ${language} is not yet supported`);
     }
 }

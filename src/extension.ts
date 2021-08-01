@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import { dirtyTrace } from './dirtytrace';
+import { goFoldErrors } from './gofolderrors';
 import { goLogField } from './gologfield';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -16,6 +17,10 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(vscode.commands.registerTextEditorCommand(
 		'extension.goLogField',
 		goLogField
+	));
+	context.subscriptions.push(vscode.commands.registerTextEditorCommand(
+		'extension.goFoldErrors',
+		goFoldErrors
 	));
 }
 

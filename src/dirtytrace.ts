@@ -5,6 +5,10 @@ const JAVASCRIPT = ["javascript", "javascriptreact", "typescript", "typescriptre
 export type Where = "before" | "after";
 
 export function dirtyTrace(textEditor: vscode.TextEditor, where: Where) {
+    textEditor.document.languageId
+    vscode.languages.getLanguages().then(languages=> {
+        languages
+    })
     const position = textEditor.selection.active;
     const language = textEditor.document.languageId;
     let folder = "NO WORKSPACE FOLDER";
